@@ -1,0 +1,5 @@
+dev dependences -->  jis me development me kaam aata hai jab deplaoy karte hai toh koi zaraurat nahi hoti
+dependences --> hamesha kaam aata hai
+
+
+.env problem with module
