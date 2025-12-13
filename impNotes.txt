@@ -1,5 +1,32 @@
 dev dependences -->  jis me development me kaam aata hai jab deplaoy karte hai toh koi zaraurat nahi hoti
 dependences --> hamesha kaam aata hai
 
+folder public/temp --> this is used in order to temperoraly keep the uploaded file in local for uploading because you dont want to be directly uploading because failure can occur at nay time
 
-.env problem with module
+.env problem with module\
+
+
+files inside src 
+index.js --> main file for running
+constant.js --> for keeping all the constants variables 
+app.js --> it includes all the app related thing 
+folders in src
+
+controllers --> for functionality
+db --> for database connection
+middlewares --> for verification
+models --> for db models
+routes --> for routes
+utills --> for utility eg . file uploading mailing token lena dena 
+
+
+installing prettier as a dev dependences
+
+because in professional area same formating is important that is why this is needed
+per project bases
+
+we have to add some files
+
+.prettierrc --> for configuration 
+
+.prettierignore --> bcz some files dont need formating like .env bcz it have wierd syntax
