@@ -30,3 +30,111 @@ we have to add some files
 .prettierrc --> for configuration 
 
 .prettierignore --> bcz some files dont need formating like .env bcz it have wierd syntax
+
+
+lecture 07  Connecting database
+
+mongo db  atlas create account 
+
+create cluster 
+create user 
+local environment 
+add allow all access points 
+connect
+paste the link in env file
+
+create a db name in constant bcz reusability and onlly chang in one
+
+DataBase Connection
+
+2 approaches 
+one full in index 
+and other one is db file used
+
+
+installing mongoose dotenv express
+
+mongoose is used to connec to database and 
+error can happen so use try catch every time
+
+1st 
+import mongoose 
+iffy ;()()
+use async
+try catch
+
+2nd
+new file db write new functio
+import in index the execute
+
+import dotenv 
+the config give path 
+and then 
+
+go to pakage.json then add 
+-r dotenv/config --experimental-json-modules
+
+connectdb is async so it return a promise now then the thing is that you have to add .then() and .catch()
+
+create app in app.js then export it 
+then after connectdb add it in .then part of code 
+
+imp --> app.use() is used when adding middlewares or configuration file
+
+
+cors and cookie-parser
+
+app.use(express.json({limit:"16kb"}))   now when the backend accepts only json limit upto only 16 kb
+
+***
+(err,res,req,next)
+
+next --> middleware flag ye bolega agr kam hogay toh next middle ware pe jao\
+***
+
+
+higher order function woh func jo kisi  function ko parameter ki tarah accept karsakte hai 
+and ya phir ruturn karsaakte hai 
+
+const asyncHandler = (fn) =>async () => {}
+
+now we are making a  miidleware function which is a utility because it is a hectic to make try catch every time when we are making async function now to solve that we have made sure to make a
+asyncfunction which will take on the function and then return error if error or return the function if no errror
+
+
+now make mongoose model user and  Video
+index for searching
+
+
+
+npm i mongooseAggregatePaginate-v2
+
+and then videoschema.plugin (mongooseAggregatePaginate)
+
+for aggregation pipleine enable using
+
+bcrypt for hashing password 
+
+jwt jsonwebtoken for tokens
+
+.pre data save hone se just pehle ye code chalega 
+
+"save" for saving 
+ bcrypt.hash() for hasing 
+
+ if (this.isModified("password"))   +> check if the password is modified 
+
+
+ Creating custom methods in mongoose 
+
+ userSchema.methods.isPasswordCorrect(){}
+
+ JWT -> bearer token jiske pass ye hai wo allowed hai
+
+ ACCESS_TOKEN_SECRET
+ ACCESS_TOKEN_EXPIRY 
+
+ sessions
+ cookies 
+ 
+ jwt.sign(payload,accesstoken_secret, expiryobject)
