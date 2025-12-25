@@ -138,3 +138,82 @@ jwt jsonwebtoken for tokens
  cookies 
  
  jwt.sign(payload,accesstoken_secret, expiryobject)
+
+
+lecture 11
+
+ MULTER
+insltall cloudnary
+install multer
+
+congifure it and env 
+
+make a util cloudinary 
+main work 
+
+
+
+this will take  a thing from the local space and then take it and upload it to the next cloudinary
+import fs
+fs node file system in node 
+docs 
+
+fs.unlink - imp  for deleting file 
+
+
+using multer as a middleware 
+
+storing multer in diskStorage
+
+
+make controllers
+ make route 
+ connect route in app 
+
+Register function ---->>>
+
+steps 
+
+take password fullname email username from the req.body
+then take avatar img and coverImg 
+and then save the everything in db
+then genrate access token refresh token
+login 
+
+--> 
+get users from the frontend 
+validate -> check if not empty
+check if user exist  : email username 
+check for img , avatar exist 
+upload images to cloudnary
+create user object -> create entry in db
+remove pass and rf token from response 
+check user creation
+return response
+
+import multer upload in to routes
+
+upload .fields(to accept multiple file) inside post before register user 
+
+
+GENERATE rEFRESH tOKEN AND ACCESS tOKEN
+
+modern practice 
+a => short lived 
+r => long lived 
+
+create loginUser function 
+  // get password and (username or email ) from req.body
+  // check for validation not empth
+  // find user using username exist or not
+  // check password
+  // return the user
+  // create session refreshToken and accesToken
+  // send coolies
+
+
+
+  access token ==> short lived 
+  refresh token ==> longed lived 
+
+  if 401 hit somtihing and access toke new generation

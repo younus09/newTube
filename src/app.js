@@ -15,4 +15,8 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); // for url makes
 app.use(express.static("public")); //for local file accessing
 app.use(cookieParser()); //for cookies saving things on browser config
 
+import userRouter from "./routes/user.routes.js";
+
+app.use("/api/v1/users", userRouter);
+
 export { app };
