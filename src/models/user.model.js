@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema(
     coverImg: {
       type: String,
     },
-    watchedHistory: [
+    watchHistory: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Video",
